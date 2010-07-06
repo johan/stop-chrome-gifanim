@@ -24,7 +24,7 @@ function freeze_gif(i) {
   try {
     i.src = c.toDataURL("image/gif"); // if possible, retain all css aspects
   } catch(e) { // cross-domain -- mimic original with all its tag attributes
-    for (var j = 0, a; a = i.attributes[j]; i++)
+    for (var j = 0, a; a = i.attributes[j]; j++)
       i.setAttribute(a.name, a.value);
     i.parentNode.replaceChild(c, i);
   }
